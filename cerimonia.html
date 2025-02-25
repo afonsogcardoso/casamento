@@ -11,13 +11,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body> 
+<body>
     <div id="menu-container"></div>
     <script>
-         function loadMenu() {
+        function loadMenu() {
             fetch('menu.html')
                 .then(response => response.text())
                 .then(data => {
@@ -34,15 +34,21 @@
             sidebar.classList.toggle('open');
         }
     </script>
-    
+
     <main class="container">
         <section class="inicio">
             <div class="imagens-casamento">
                 <div class="cerimonia-container">
                     <img src="images/cerimonia/cerimonia-home.png" alt="Inicio">
+                    <div style="    display: flex;    width: 100%;    margin-left: 73px;"><a
+                            href="https://maps.app.goo.gl/cPDJpxjH6NmcFPxt8" style="color: #565754;font-size: 10px;">
+                            <i style="font-size: 8px;color: gray;padding: 5px;" class="fas fa-location-pin"></i>
+                            Igreja de Santa Maria em Óbidos</a>
+                    </div>
                 </div>
                 <div class="cerimonia-container">
                     <img src="images/cerimonia/estacionamento.png" alt="Estacionamento">
+                    <p></p>
                 </div>
             </div>
         </section>

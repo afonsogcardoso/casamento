@@ -117,19 +117,3 @@ body {
 .sidebar a:hover {
     background-color: #575757;
 }
-
-/* Estilo do conteúdo principal
-.content {
-    margin-left: 250px;
-    padding: 20px;
-}
-
-/* Adiciona efeito de abrir e fechar o menu (opcional) 
-.open-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 30px;
-    color: #333;
-    cursor: pointer;
-} */
