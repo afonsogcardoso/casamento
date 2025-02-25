@@ -53,27 +53,6 @@ body {
     border-radius: 8px;
 }
 
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .imagens-casamento {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .imagens-casamento img {
-        max-width: 90%;
-    }
-
-    .cerimonia-container img {
-        max-width: 300px;
-    }
-}
-
 /* Side Bar*/
 .sidebar {
     position: fixed;
@@ -83,7 +62,7 @@ body {
     width: 250px;
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     opacity: 0;
     visibility: hidden;
     /* Initially hidden */
@@ -157,7 +136,7 @@ i.sidebar-icon {
 }
 
 .sidebar-menu {
-    margin: 16px 0px 0px 22px;
+    margin: 6px 0px 0px 13px;
     display: block;
     position: absolute;
     cursor: pointer;
@@ -173,4 +152,24 @@ i.sidebar-icon {
 .sidebar-menu .menu-icon:hover {
     background-color:  #575757;
     color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .imagens-casamento {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagens-casamento img {
+        max-width: 90%;
+    }
+
+    .cerimonia-container img {
+        max-width: 300px;
+    }
 }
