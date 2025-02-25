@@ -39,6 +39,7 @@ body {
     height: 800px;
     border: none;
 }
+
 .cerimonia-container {
     display: flex;
     flex-direction: column;
@@ -67,7 +68,8 @@ body {
     .imagens-casamento img {
         max-width: 90%;
     }
-    .cerimonia-container img{
+
+    .cerimonia-container img {
         max-width: 300px;
     }
 }
@@ -83,14 +85,24 @@ body {
     color: #fff;
     padding: 20px;
     opacity: 0;
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in/out */
+    visibility: hidden;
+    /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Smooth fade-in/out */
+}
+
+i.sidebar-icon {
+    width: 30px;
 }
 
 /* Open state */
 .sidebar.open {
     opacity: 1;
     visibility: visible;
+}
+.sidebar-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 /* Button to open the sidebar */
@@ -115,6 +127,50 @@ body {
     transition: 0.3s;
 }
 
+.sidebar a.menu-icon {
+    cursor: pointer;
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    border-radius: 4px;
+    width: 15px
+}
+
+.sidebar a.menu-icon:hover {
+    padding: 6px 12px;
+    text-decoration: none;
+    background-color: #575757;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    border-radius: 4px;
+    width: 15px
+}
+
 .sidebar a:hover {
     background-color: #575757;
+    border-radius: 4px;
+}
+
+.sidebar-menu {
+    margin: 16px 0px 0px 22px;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+.sidebar-menu .menu-icon {
+    padding: 5px 9px;
+    text-decoration: none;
+    color: #575757;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+.sidebar-menu .menu-icon:hover {
+    background-color:  #575757;
+    color: white;
 }
