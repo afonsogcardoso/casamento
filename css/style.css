@@ -12,7 +12,7 @@ body {
 .container {
     width: 80%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 0 15px;
 }
 
@@ -70,3 +70,66 @@ body {
         max-width: 90%;
     }
 }
+
+/* Side Bar*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in/out */
+}
+
+/* Open state */
+.sidebar.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Button to open the sidebar */
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 20px 20px 0px 20px;
+}
+
+/* Rest of the page content */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Estilo do conteúdo principal
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Adiciona efeito de abrir e fechar o menu (opcional) 
+.open-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+} */
