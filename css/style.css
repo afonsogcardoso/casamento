@@ -30,7 +30,6 @@ body {
 
 .imagens-casamento img {
     width: 100%;
-    max-width: 300px;
     height: auto;
     border-radius: 8px;
 }
@@ -49,7 +48,6 @@ body {
 .cerimonia-container img {
     display: block;
     width: 100%;
-    max-width: 300px;
     height: auto;
     border-radius: 8px;
 }
@@ -68,6 +66,9 @@ body {
 
     .imagens-casamento img {
         max-width: 90%;
+    }
+    .cerimonia-container img{
+        max-width: 300px;
     }
 }
 
