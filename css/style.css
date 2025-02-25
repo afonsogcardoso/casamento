@@ -160,6 +160,11 @@ i.sidebar-icon {
         width: 90%;
     }
 
+    .sidebar-menu {
+        position: static;
+        margin-top: 16px;
+    }
+
     .imagens-casamento {
         flex-direction: column;
         align-items: center;
