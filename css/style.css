@@ -52,6 +52,17 @@ body {
     height: auto;
     border-radius: 8px;
 }
+.cocktail-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cocktail-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
 /* Side Bar*/
 .sidebar {
@@ -177,4 +188,9 @@ i.sidebar-icon {
     .cerimonia-container img {
         max-width: 300px;
     }
+    
+    .cocktail-container img {
+        max-width: 300px;
+    }
+    
 }
