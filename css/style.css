@@ -52,6 +52,7 @@ body {
     height: auto;
     border-radius: 8px;
 }
+
 .cocktail-container {
     display: flex;
     flex-direction: column;
@@ -90,6 +91,7 @@ i.sidebar-icon {
     opacity: 1;
     visibility: visible;
 }
+
 .sidebar-menu.hidden {
     opacity: 0;
     visibility: hidden;
@@ -152,6 +154,7 @@ i.sidebar-icon {
     position: absolute;
     cursor: pointer;
 }
+
 .sidebar-menu .menu-icon {
     padding: 5px 9px;
     text-decoration: none;
@@ -160,10 +163,12 @@ i.sidebar-icon {
     transition: 0.3s;
     border-radius: 4px;
 }
+
 .sidebar-menu .menu-icon:hover {
-    background-color:  #575757;
+    background-color: #575757;
     color: white;
 }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -188,9 +193,8 @@ i.sidebar-icon {
     .cerimonia-container img {
         max-width: 300px;
     }
-    
+
     .cocktail-container img {
         max-width: 300px;
     }
-    
 }
