@@ -1,5 +1,44 @@
+@font-face {
+    font-family: 'modern_prestige';
+    src: url('fonts/Modern-Prestige.eot');
+    src: url('fonts/Modern-Prestige.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Modern-Prestige.woff2') format('woff2'),
+        url('fonts/Modern-Prestige.woff') format('woff'),
+        url('fonts/Modern-Prestige.ttf') format('truetype'),
+        url('fonts/Modern-Prestige.svg#modern_prestige') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'jmh_typewriter';
+    src: url('fonts/JMH-Typewriter-Thin.eot');
+    src: url('fonts/JMH-Typewriter-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/JMH-Typewriter-Thin.woff2') format('woff2'),
+        url('fonts/JMH-Typewriter-Thin.woff') format('woff'),
+        url('fonts/JMH-Typewriter-Thin.ttf') format('truetype'),
+        url('fonts/JMH-Typewriter-Thin.svg#jmh_typewriter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'modern_prestige', sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: 6px;
+}
+
+h3 {
+    font-family: 'modern_prestige', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 6px;
+    color: #020202;
+}
+
 body {
-    font-family: "Bodoni Moda", serif;
+    font-family: "modern_prestige", serif;
     font-optical-sizing: auto;
     margin: 0;
     padding: 0;
@@ -14,6 +53,21 @@ body {
     max-width: 1200px;
     margin: 10px auto;
     padding: 0 15px;
+}
+
+.container p,
+.container span {
+    color: #020202;
+    font-family: 'jmh_typewriter', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.container a {
+    text-decoration: underline solid 1px;
+    text-decoration-color: #020202;
+    text-underline-offset: 4px;
 }
 
 .inicio {
@@ -31,7 +85,7 @@ body {
 .imagens-casamento img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 .formulario iframe {
@@ -50,7 +104,7 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 .cocktail-container {
@@ -62,7 +116,7 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 /* Side Bar*/
@@ -119,6 +173,10 @@ i.sidebar-icon {
     transition: 0.3s;
 }
 
+.sidebar span {
+    font-size: 30px;
+}
+
 .sidebar a.menu-icon {
     cursor: pointer;
     padding: 6px 12px;
@@ -171,6 +229,17 @@ i.sidebar-icon {
 
 
 /* Responsividade */
+@media (max-width: 430px) {
+    h2 {
+        font-size: 30px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+}
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
