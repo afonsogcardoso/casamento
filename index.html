@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body>
+<body class="index-body">
     <div id="menu-container"></div>
     <script>
         function loadMenu() {
@@ -36,38 +36,52 @@
             sidebarMenuIcon.classList.toggle('hidden');
         }
     </script>
-    <main class="container">
-        <section class="inicio">
-            <div class="imagens-casamento">
-                <div class="cerimonia-container">
-                    <img src="images/home/inicio.png" alt="Inicio">
+        <div class="grid-container">
+            <div class="grid-item" style="display: flex;flex-direction: column;justify-content: flex-start;">
+                <h2>i. inicio</h2>
+                <div class="sub-sub-container">
+                    <p>Num dia ensolarado em pleno Verão de Agosto, Maria e Afonso conheceram-se no sítio habitual
+                        para
+                        qualquer Estorilense.</p>
+                    <p>A maré vazia das 11 da manhã, e a extensa areia branca abraçavam um dia estranhamente
+                        silencioso para
+                        uma quarta-feira na Praia da Poça.</p>
+                    <p>Duas amigas estendem a toalha e, enquanto põem a conversa em dia, são interrompidas pelo
+                        Afonso, que
+                        comprimentou uma das amigas. Dois dedos de conversa transformam-se em horas e ali ficam os
+                        3, Afonso
+                        como bom conversador e Maria como boa observadora, naquele que seria para muitos mais um dia
+                        passado
+                        na Praia da Poça, mas para os dois, o começo da sua história.</p>
                 </div>
-                <div class="cerimonia-container">
-                    <img src="images/home/titulo-casamento.png" alt="Casamento">
-                </div>
-                <a href="cerimonia.html">
-                    <div class="cerimonia-container">
-                        <img src="images/home/cerimonia.png" alt="Cerimonia">
-                    </div>
-                </a>
-                <a href="cocktail.html">
-                    <div class="cerimonia-container">
-                        <img src="images/home/cocktail.png" alt="Cocktail">
-                    </div>
-                </a>
-                <a href="festa.html">
-                    <div class="cerimonia-container">
-                        <img src="images/home/festaeviagem.png" alt="Festa e Viagem">
-                    </div>
-                </a>
-
             </div>
-        </section>
+            <div class="grid-item">
+                <h2>ii. casamento</h2>
+            </div>
+            <div class="grid-item">
+                <div class="image-container" href="cerimonia.html">
+                    <img src="images/home/cerimonia.png" alt="CERIMONIA">
+                    <label>a cerimonia</label>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-container" href="cocktail.html">
+                    <img src="images/home/cocktail.png" alt="COCKTAIL">
+                    <label>cocktail</label>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="image-container" href="festa.html">
+                    <img src="images/home/festaeviagem.png" alt="FESTA E VIAGEM">
+                    <label>a viagem</label>
+                </div>
+            </div>
+        </div>
+
         <!-- <section class="formulario">
             <h2>III. Confirmação de Presença</h2>
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckX7rSj0To9_Gi1GUSI8h6gGIuJtY137t86W8gSg3MBiGvIg/viewform?embedded=true" width="640" height="1062" frameborder="0" marginheight="0" marginwidth="0">A carregar…</iframe>
         </section> -->
-    </main>
 </body>
 
 </html>

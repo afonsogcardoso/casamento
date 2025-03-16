@@ -22,37 +22,83 @@
     font-style: normal;
 }
 
-h2 {
-    font-family: 'modern_prestige', sans-serif;
-    font-size: 50px;
-    font-weight: 100;
-    letter-spacing: 6px;
-}
-
-h3 {
-    font-family: 'modern_prestige', sans-serif;
-    font-size: 30px;
-    font-weight: 100;
-    letter-spacing: 6px;
-    color: #020202;
-}
-
+/*Reviewed*/
 body {
-    font-family: "modern_prestige", serif;
-    font-optical-sizing: auto;
-    margin: 0;
-    padding: 0;
     background-image: url('../images/fundo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+/*Reviewed*/
+p {
+    font-family: "jmh_typewriter", serif;
+    font-size: 12px;
+}
+
+h2 {
+    font-family: "modern_prestige", serif;
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: 6px;
+}
+
+label {
+    font-family: "modern_prestige", serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #020202;
+    cursor: pointer;
+}
+
 .container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 10px auto;
-    padding: 0 15px;
+    margin: auto;
+    max-width: 700px;
+    height: 100%;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    height: calc(100% - 33px);
+}
+
+.image-container img {
+    width: auto;
+    height: 100%
+}
+
+
+@media (min-width: 768px) {
+
+    body,
+    html {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 100vh;
+        width: 75vw;
+        box-sizing: border-box;
+        gap: 10px;
+    }
+
+    .grid-item {
+        display: flex;
+        justify-content: center;
+        height: calc(50vh - 25px);
+    }
 }
 
 .container p,
@@ -60,7 +106,7 @@ body {
     color: #020202;
     font-family: 'jmh_typewriter', sans-serif;
     letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 14px;
     padding: 20px;
 }
 
@@ -70,57 +116,48 @@ body {
     text-underline-offset: 4px;
 }
 
-.inicio {
-    text-align: justify;
-    margin-bottom: 30px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+    /* height: calc(100vh - 200px); 
+    width: calc(100vw - 200px);   */
 }
 
-.imagens-casamento {
-    display: flex;
+.grid-item {
+    max-height: 50vh;
+}
+
+.sub-container {
+    display: table;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
 
-.imagens-casamento img {
+.sub-container img {
     width: 100%;
     height: auto;
-    /* border-radius: 8px; */
 }
 
-.formulario iframe {
-    width: 100%;
-    height: 800px;
-    border: none;
-}
-
-.cerimonia-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cerimonia-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    /* border-radius: 8px; */
-}
-
-.cocktail-container {
+.sub-sub-container {
     display: flex;
     flex-direction: column;
 }
 
-.cocktail-container img {
+.sub-sub-container img {
     display: block;
     width: 100%;
     height: auto;
-    /* border-radius: 8px; */
 }
 
 /* Side Bar*/
 .sidebar {
+    font-family: "modern_prestige", serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -131,37 +168,27 @@ body {
     padding: 10px;
     opacity: 0;
     visibility: hidden;
-    /* Initially hidden */
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    /* Smooth fade-in/out */
 }
 
 i.sidebar-icon {
     width: 30px;
 }
 
-/* Open state */
 .sidebar.open {
     opacity: 1;
     visibility: visible;
 }
 
-.sidebar-menu.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-/* Button to open the sidebar */
 .open-btn {
     font-size: 20px;
     cursor: pointer;
     padding: 20px 20px 0px 20px;
 }
 
-/* Rest of the page content */
-.content {
-    margin-left: 250px;
-    padding: 20px;
+
+.sidebar span {
+    font-size: 30px;
 }
 
 .sidebar a {
@@ -173,9 +200,12 @@ i.sidebar-icon {
     transition: 0.3s;
 }
 
-.sidebar span {
-    font-size: 30px;
+.sidebar a:hover {
+    background-color: #575757;
+    border-radius: 4px;
 }
+
+
 
 .sidebar a.menu-icon {
     cursor: pointer;
@@ -201,16 +231,22 @@ i.sidebar-icon {
     width: 15px
 }
 
-.sidebar a:hover {
-    background-color: #575757;
-    border-radius: 4px;
-}
+
 
 .sidebar-menu {
-    margin: 6px 0px 0px 13px;
-    display: block;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    /* margin: 6px 0px 0px 13px; */
+    /* display: block; */
     cursor: pointer;
+    /* position: absolute; */
+}
+
+.sidebar-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .sidebar-menu .menu-icon {
@@ -229,7 +265,11 @@ i.sidebar-icon {
 
 
 /* Responsividade */
-@media (max-width: 430px) {
+@media (max-width: 480px) {
+    .grid-container {
+        display: block;
+    }
+
     h2 {
         font-size: 30px;
     }
@@ -238,9 +278,17 @@ i.sidebar-icon {
         width: 90%;
     }
 
+    .image-container img {
+        width: 100%;
+        height: auto
+    }
 }
 
 @media (max-width: 768px) {
+    .grid-container {
+        display: block;
+    }
+
     .container {
         width: 90%;
     }
@@ -250,20 +298,12 @@ i.sidebar-icon {
         margin-top: 16px;
     }
 
-    .imagens-casamento {
+    .sub-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .imagens-casamento img {
-        max-width: 90%;
-    }
-
     .cerimonia-container img {
-        max-width: 300px;
-    }
-
-    .cocktail-container img {
         max-width: 300px;
     }
 }

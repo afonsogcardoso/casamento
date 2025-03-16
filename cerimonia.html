@@ -24,11 +24,7 @@
                     document.getElementById('menu-container').innerHTML = data;
                 });
         }
-
-        // Chama a função para carregar o menu
         loadMenu();
-
-        // Função para abrir e fechar o menu
         function toggleMenu() {
             var sidebar = document.querySelector(".sidebar");
             sidebar.classList.toggle('open');
@@ -36,24 +32,22 @@
             sidebarMenuIcon.classList.toggle('hidden');
         }
     </script>
-    <main class="container" style="max-width: 700px;">
-        <section class="inicio">
-            <div class="imagens-casamento" style="justify-content: left;">
+    <main class="container">
+        <section>
+            <div class="sub-container" style="justify-content: left;">
                 <h2>a cerimonia</h2>
-                <div class="cocktail-container">
+                <div class="sub-sub-container">
                     <img src="images/cerimonia/banner.png" alt="CASA DAS GAEIRAS">
                 </div>
-                <div class="cocktail-container">
+                <div class="sub-sub-container">
                     <span>A cerimonia será na Igreja de Santa Maria de Óbidos, às 16h00.</span><br>
                     <a href="https://maps.app.goo.gl/cPDJpxjH6NmcFPxt8" target="_blank">
                         <span>Igreja de Santa Maria de Óbidos</span>
                     </a>
                 </div>
-                <h3>como chegar/estacionamento</h3>
+                <h2>estacionamento</h2>
                 <a href="https://maps.app.goo.gl/32hAv3rwcf7EiDCJ9" target="_blank">
-                        <div class="cerimonia-container">
-                            <img src="images/cerimonia/estacionamento.png" alt="Estacionamento">
-                        </div>
+                        <img src="images/cerimonia/estacionamento.png" alt="Estacionamento">
                 </a>
             </div>
         </section>
