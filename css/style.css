@@ -44,6 +44,13 @@ h2 {
     letter-spacing: 6px;
 }
 
+h3 {
+    font-family: "jmh_typewriter", serif;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
 label {
     font-family: "modern_prestige", serif;
     font-size: 30px;
@@ -74,6 +81,7 @@ label {
 
 
 @media (min-width: 768px) {
+
     body,
     html {
         height: 100vh;
@@ -98,7 +106,8 @@ label {
         justify-content: center;
         height: calc(50vh - 25px);
     }
-    .grid-item  a {
+
+    .grid-item a {
         text-decoration: none;
     }
 }
@@ -126,6 +135,34 @@ label {
     padding: 20px;
     box-sizing: border-box;
     gap: 20px;
+}
+
+.hotel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 90%;
+}
+
+.hotel {
+    max-height: 25vh;
+    display: flex;
+    gap: 20px;
+}
+
+.hotel img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+/* 
+.hotel-info {
+    max-width: 400px;
+} */
+
+.hotel-info p{
+    padding: 0px;
 }
 
 .sub-container {
@@ -227,8 +264,6 @@ i.sidebar-icon {
     width: 15px
 }
 
-
-
 .sidebar-menu {
     position: fixed;
     top: 0;
@@ -269,6 +304,10 @@ i.sidebar-icon {
     h2 {
         font-size: 30px;
     }
+    
+    h3 {
+        font-size: 14px;
+    }
 
     .container {
         width: 90%;
@@ -277,6 +316,9 @@ i.sidebar-icon {
     .image-container img {
         width: 100%;
         height: auto
+    }
+    .hotel-info p{
+        font-size: 10px;
     }
 }
 
