@@ -57,11 +57,11 @@
             </div>
             <div>
                 <label for="otherGuests">Confirmação de outros convidados:</label>
-                <textarea id="otherGuests" name="otherGuests" ></textarea>
+                <textarea id="otherGuests" name="otherGuests"></textarea>
             </div>
             <div>
                 <label for="comments">Mensagem para os noivos:</label>
-                <textarea id="comments" name="comments" ></textarea>
+                <textarea id="comments" name="comments"></textarea>
             </div>
             <button type="submit">Enviar</button>
         </form>
@@ -85,9 +85,12 @@
                 other_guests: document.getElementById("otherGuests").value,
                 comments: document.getElementById("comments").value
             };
-             const response = await fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
+            const response = await fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: {
+                    "Content-Type": "application/json", 'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'
+                },
                 body: JSON.stringify(formData)
             });
 
