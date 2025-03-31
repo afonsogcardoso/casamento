@@ -59,6 +59,19 @@ label {
     cursor: pointer;
 }
 
+form label{
+    font-family: "jmh_typewriter", serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #020202;
+    cursor: pointer;
+    display: inline-flex;
+    width: 80px;
+}
+form div{
+    padding: 4px;
+}
+
 .container {
     margin: auto;
     max-width: 700px;
