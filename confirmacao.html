@@ -38,16 +38,63 @@
         <div class="sub-container" style="justify-content: left;">
             <h2>confirmacao</h2>
         </div>
-        <iframe 
+        <form id="contactForm">
+            <div>
+                <label for="firstName">Nome:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div>
+                <label for="lastName">Apelido:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="otherGuests">Confirmação de outros convidados:</label>
+                <textarea id="otherGuests" name="otherGuests" ></textarea>
+            </div>
+            <div>
+                <label for="comments">Mensagem para os noivos:</label>
+                <textarea id="comments" name="comments" ></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p id="responseMessage"></p>
+        <!-- <iframe 
         src="https://afonsogcardoso.wixsite.com/mariaeafonso/event-details/maria-e-afonso/form" 
         width="100%" 
         height="600" 
         style="border:none;">
-    </iframe>
-        <!-- <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSckX7rSj0To9_Gi1GUSI8h6gGIuJtY137t86W8gSg3MBiGvIg/viewform?embedded=true"
-            width="380" height="600" frameborder="0" marginheight="0" marginwidth="0">A carregar…</iframe> -->
+    </iframe> -->
     </main>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const formData = {
+                first_name: document.getElementById("firstName").value,
+                last_name: document.getElementById("lastName").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                other_guests: document.getElementById("otherGuests").value,
+                comments: document.getElementById("comments").value
+            };
+             const response = await fetch("https://form.mariaeafonso.pt/.netlify/functions/submitForm", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            document.getElementById("responseMessage").textContent = result.message;
+        });
+    </script>
 </body>
 
 </html>

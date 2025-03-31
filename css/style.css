@@ -156,10 +156,10 @@ label {
     object-fit: contain;
     border-radius: 8px;
 }
-/* 
-.hotel-info {
-    max-width: 400px;
-} */
+
+div#WIX_ADS {
+    display: none  !important;;
+}
 
 .hotel-info p{
     padding: 0px;
