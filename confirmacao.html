@@ -85,7 +85,7 @@
                 other_guests: document.getElementById("otherGuests").value,
                 comments: document.getElementById("comments").value
             };
-             const response = await fetch("https://form.mariaeafonso.pt/.netlify/functions/submitForm", {
+             const response = await fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
