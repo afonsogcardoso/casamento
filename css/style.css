@@ -71,7 +71,18 @@ form label{
 form div{
     padding: 4px;
 }
+form textarea {
+    width: 100%; 
+    min-height: 40px; 
+    margin-top: 2px;
+}
 
+form fieldset {
+    border: none;
+}
+form fieldset:disabled {
+    opacity: 0.5;
+}
 .container {
     margin: auto;
     max-width: 700px;
