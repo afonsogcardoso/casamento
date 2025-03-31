@@ -83,6 +83,12 @@ form fieldset {
 form fieldset:disabled {
     opacity: 0.5;
 }
+
+form button {
+  background-color: #575757 !important;
+  color: white;
+  border-radius: 4px;
+}
 .container {
     margin: auto;
     max-width: 700px;
@@ -105,7 +111,6 @@ form fieldset:disabled {
 
 
 @media (min-width: 768px) {
-
     body,
     html {
         height: 100vh;
@@ -133,6 +138,10 @@ form fieldset:disabled {
 
     .grid-item a {
         text-decoration: none;
+    }
+
+    form {
+        min-width: 768px
     }
 }
 
@@ -321,6 +330,7 @@ i.sidebar-icon {
 
 /* Responsividade */
 @media (max-width: 480px) {
+
     .grid-container {
         display: block;
     }
@@ -347,6 +357,7 @@ i.sidebar-icon {
 }
 
 @media (max-width: 768px) {
+    
     .grid-container {
         display: block;
     }
