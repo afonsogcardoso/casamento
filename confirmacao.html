@@ -38,34 +38,45 @@
         <div class="sub-container" style="justify-content: left;">
             <h2>confirmacao</h2>
         </div>
+        <div>
+            <p>O nosso grande dia está a chegar e queremos muito partilhá-lo convosco! Estamos a preparar um momento
+                especial e a vossa presença é imprescindível para torná-lo completo.
+                <br><br>Gostaríamos muito de contar convosco neste dia único.
+                <br><br>Para nos ajudarem na organização, pedimos que confirmem a vossa presença preenchendo o
+                formulário abaixo.
+            </p>
+        </div>
         <form id="contactForm" class="form">
             <fieldset>
                 <div>
                     <label for="firstName">Nome</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                    <input type="text" id="firstName" name="firstName" placeholder="Nome" required>
                 </div>
                 <div>
                     <label for="lastName">Apelido</label>
-                    <input type="text" id="lastName" name="lastName" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Apelido" required>
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
                 </div>
                 <div>
                     <label for="phone">Telefone</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
                 </div>
+                <br>
                 <div>
                     <label style="width: 100%;" for="otherGuests">Confirmar outros convidados</label>
                     <br>
                     <textarea id="otherGuests" name="otherGuests"
-                        placeholder="Escreva o primeiro e último nome dos convidados..."></textarea>
+                        placeholder="Escreva o primeiro e último nome dos convidados que o acompanham..."></textarea>
                 </div>
+                <br>
                 <div>
-                    <label style="width: 100%;" for="comments">Mensagem para os noivos</label>
+                    <label style="width: 100%;" for="comments">O que não pode faltar neste dia?</label>
                     <br>
-                    <textarea id="comments" name="comments"></textarea>
+                    <textarea id="comments" name="comments"
+                        placeholder="Partilhem connosco o que não pode faltar neste dia!"></textarea>
                 </div>
                 <button id="confirmationButton"
                     style="width:  calc(100% - 2px); margin-left:4px; font-family: 'jmh_typewriter'"
@@ -90,6 +101,7 @@
                 comments: document.getElementById("comments").value
             };
             // const response = await fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
+            // const response = await fetch("http://localhost:8888/.netlify/functions/submitForm", {
             //     method: "POST",
             //     headers: {
             //         "Content-Type": "application/json"

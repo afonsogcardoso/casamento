@@ -37,7 +37,7 @@
         }
     </script>
     <div class="grid-container">
-        <div class="grid-item" style="display: flex;flex-direction: column;justify-content: flex-start;">
+        <div class="grid-item" style="display: flex;flex-direction: column;justify-content: flex-start;min-width: 350px">
             <h2>i. inicio</h2>
             <div class="sub-sub-container">
                 <p>Num dia ensolarado em pleno Verão de Agosto, Maria e Afonso conheceram-se no sítio habitual
@@ -55,14 +55,12 @@
                     na Praia da Poça, mas para os dois, o começo da sua história.</p>
             </div>
         </div>
-        <div class="grid-item">
+        <div class="grid-item" style="max-width: 350px; flex-wrap: nowrap; flex-direction: column;">
             <h2>ii. casamento</h2>
-        </div>
-        <div class="grid-item">
             <a href="cerimonia.html" style="text-decoration: none;">
-                <div class="image-container">
+                <div class="image-container" style="align-items: flex-start;">
                     <img src="images/home/cerimonia.png" alt="CERIMONIA">
-                    <label>a cerimonia</label>
+                    <label style="margin-top: -55px;margin-bottom: 55px;">a cerimonia</label>
                 </div>
             </a>
         </div>
@@ -76,8 +74,16 @@
         </div>
         <div class="grid-item">
             <a href="cocktail.html" style="text-decoration: none;">
-                <div class="image-container">
-                    <img src="images/home/festaeviagem.png" alt="FESTA E VIAGEM">
+                <div class="image-container" style="align-items: flex-end;">
+                    <img src="images/home/festa.png" alt="FESTA">
+                    <label style="margin-top: -150px;margin-bottom: 150px;">a festa</label>
+                </div>
+            </a>
+        </div>
+        <div class="grid-item" style="max-width: 350px;">
+            <a href="viagem.html" style="text-decoration: none;">
+                <div class="image-container" style="align-items: flex-start;">
+                    <img src="images/home/viagem.png" alt="VIAGEM" style="max-width: 350px;width: auto;height: auto;">
                     <label>a viagem</label>
                 </div>
             </a>
@@ -85,7 +91,7 @@
         <div class="grid-item">
             <a href="confirmacao.html" style="text-decoration: none;">
                 <div class="image-container">
-                    <img src="images/home/confirmacao.jpg" alt="CONFIRMACAO">
+                    <img src="images/home/confirmacao.png" alt="CONFIRMACAO">
                     <label>confirmacao</label>
                 </div>
             </a>
