@@ -84,8 +84,8 @@
             </fieldset>
         </form>
         <div id="mensagem" style="display: none;">
-            <p>Obrigado pela sua confirmação! Vamos encaminhar de forma a saber mais sobre a nossa lua de mel.</p>
-            <p>Será redirecionado em <span id="contador">10</span> segundos...</p>
+            <p><strong>Obrigado pela confirmação!</strong><br>Enviámos um email com os detalhes deste grande dia!<br>Confirmem se foi para o SPAM.<br></p>
+            <p>Mais sobre a nossa Lua-de-Mel em <span id="contador">15</span> segundos!</p>
         </div>
         <p id="responseMessage"></p>
     </main>
@@ -112,8 +112,7 @@
             document.querySelector("fieldset").disabled = true;
             document.getElementById("mensagem").style.display = "block";
 
-            // Inicia o countdown
-            let segundos = 10;
+            let segundos = 15;
             let contadorElemento = document.getElementById("contador");
             let intervalo = setInterval(function () {
                 segundos--;
