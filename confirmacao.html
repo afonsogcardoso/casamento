@@ -79,18 +79,19 @@
                         placeholder="Partilhem connosco o que não pode faltar neste dia!"></textarea>
                 </div>
                 <button id="confirmationButton"
-                    style="width:  calc(100% - 2px); margin-left:4px; font-family: 'jmh_typewriter'"
+                    style="cursor:pointer; width: calc(100% - 2px); margin-left:4px; font-family: 'jmh_typewriter'"
                     type="submit">CONFIRMAR PRESENÇA</button>
             </fieldset>
         </form>
 
         <div id="mensagem" style="display: none;">
             <p><strong>Obrigado pela confirmação!</strong><br>Enviámos um email com os detalhes deste grande
-                dia!<br>Confirmem se foi para o SPAM.<br></p>
-            <p><a style="color:#020202"
+                dia!<br>Caso não tenham recebido, confirmem se não foi para o SPAM.<br><br><br><a style="color:#020202" href="onde-ficar.html"
+                    target="_blank">Onde ficar?</a><br><br><a style="color:#020202"
                     href="https://backend-form-mrac.netlify.app/.netlify/functions/downloadCalendar">Adicionar ao
-                    calendario!</a></p>
-            <p>Mais sobre a nossa Lua-de-Mel em <span id="contador">15</span> segundos!</p>
+                    calendario</a></p>
+            <p>Mais sobre a nossa Lua-de-Mel em <span id="contador">15</span> segundos!<br><a style="color:#020202" href="viagem.html"
+                target="_blank">Viagem/Lua-de-Mel</a></p>
         </div>
         <p id="responseMessage"></p>
     </main>
@@ -105,13 +106,13 @@
                 other_guests: document.getElementById("otherGuests").value,
                 comments: document.getElementById("comments").value
             };
-            fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(formData)
-            });
+            // fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json"
+            //     },
+            //     body: JSON.stringify(formData)
+            // });
             setTimeout(() => {
                 document.getElementById("confirmationButton").style.display = 'none';
                 document.querySelector("fieldset").disabled = true;
