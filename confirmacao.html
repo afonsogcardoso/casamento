@@ -12,9 +12,10 @@
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
-<body>
+<body class="animate__animated animate__fadeIn">
     <script>
         function loadMenu() {
             fetch('menu.html')
@@ -23,9 +24,7 @@
                     document.getElementById('menu-container').innerHTML = data;
                 });
         }
-        // Chama a função para carregar o menu
         loadMenu();
-        // Função para abrir e fechar o menu
         function toggleMenu() {
             var sidebar = document.querySelector(".sidebar");
             sidebar.classList.toggle('open');
@@ -84,7 +83,7 @@
             </fieldset>
         </form>
 
-        <div id="mensagem" style="display: none;">
+        <div id="mensagem" class="animate__animated animate__fadeIn" style="display: none;">
             <p><strong>Obrigado pela confirmação!</strong><br>Enviámos um email com os detalhes deste grande
                 dia!<br>Caso não tenham recebido, confirmem se não foi para o SPAM.<br><br><br><a style="color:#020202" href="onde-ficar.html"
                     target="_blank">Onde ficar?</a><br><br><a style="color:#020202"

@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body class="index-body">
@@ -24,11 +25,7 @@
                     document.getElementById('menu-container').innerHTML = data;
                 });
         }
-
-        // Chama a função para carregar o menu
         loadMenu();
-
-        // Função para abrir e fechar o menu
         function toggleMenu() {
             var sidebar = document.querySelector(".sidebar");
             sidebar.classList.toggle('open');
@@ -37,7 +34,7 @@
         }
     </script>
     <div class="grid-container">
-        <div class="grid-item" style="transform: none; display: flex;flex-direction: column;justify-content: flex-start;min-width: 350px">
+        <div class="grid-item animate__animated animate__fadeIn" style="transform: none; display: flex;flex-direction: column;justify-content: flex-start;min-width: 350px">
             <h2>i. inicio</h2>
             <div class="sub-sub-container">
                 <p>Num dia ensolarado em pleno Verão de Agosto, Maria e Afonso conheceram-se no sítio habitual
@@ -55,7 +52,7 @@
                     na Praia da Poça, mas para os dois, o começo da sua história.</p>
             </div>
         </div>
-        <div class="grid-item" style="max-width: 350px; flex-wrap: nowrap; flex-direction: column;">
+        <div class="grid-item animate__animated animate__fadeIn" style="max-width: 350px; flex-wrap: nowrap; flex-direction: column;">
             <h2>ii. casamento</h2>
             <a href="cerimonia.html" style="text-decoration: none;">
                 <div class="image-container" style="align-items: flex-start;">
@@ -65,7 +62,7 @@
                 </div>
             </a>
         </div>
-        <div class="grid-item" >
+        <div class="grid-item animate__animated animate__fadeIn" >
             <a href="cocktail.html" style="text-decoration: none;">
                 <div class="image-container">
                     <img src="images/home/cocktail.png" alt="COCKTAIL">
@@ -73,7 +70,7 @@
                 </div>
             </a>
         </div>
-        <div class="grid-item">
+        <div class="grid-item animate__animated animate__fadeIn">
             <a href="cocktail.html" style="text-decoration: none;">
                 <div class="image-container" style="align-items: flex-end;">
                     <img src="images/home/festa.png" alt="FESTA">
@@ -81,7 +78,7 @@
                 </div>
             </a>
         </div>
-        <div class="grid-item" style="max-width: 350px;">
+        <div class="grid-item animate__animated animate__fadeIn" style="max-width: 350px;">
             <a href="viagem.html" style="text-decoration: none;">
                 <div class="image-container" style="align-items: flex-start;">
                     <img src="images/home/viagem.png" alt="VIAGEM" style="max-width: 350px;width: auto;height: auto;">
@@ -89,7 +86,7 @@
                 </div>
             </a>
         </div>
-        <div class="grid-item">
+        <div class="grid-item animate__animated animate__fadeIn">
             <a href="confirmacao.html" style="text-decoration: none;">
                 <div class="image-container">
                     <img src="images/home/confirmacao.png" alt="CONFIRMACAO" style="max-height:350px;width: auto; ;">
@@ -98,11 +95,6 @@
             </a>
         </div>
     </div>
-
-    <!-- <section class="formulario">
-            <h2>III. Confirmação de Presença</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSckX7rSj0To9_Gi1GUSI8h6gGIuJtY137t86W8gSg3MBiGvIg/viewform?embedded=true" width="640" height="1062" frameborder="0" marginheight="0" marginwidth="0">A carregar…</iframe>
-        </section> -->
 </body>
 
 </html>
