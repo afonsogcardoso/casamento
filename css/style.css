@@ -22,6 +22,9 @@
     font-style: normal;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 /*Reviewed*/
 body {
     background-image: url('../images/fundo.jpg');
@@ -67,6 +70,9 @@ form label{
     cursor: pointer;
     display: inline-flex;
     width: 80px;
+}
+form input{
+    width: 200px;
 }
 form div{
     padding: 4px;

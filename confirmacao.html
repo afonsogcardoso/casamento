@@ -85,8 +85,11 @@
         </form>
 
         <div id="mensagem" style="display: none;">
-            <p><strong>Obrigado pela confirmação!</strong><br>Enviámos um email com os detalhes deste grande dia!<br>Confirmem se foi para o SPAM.<br></p>
-            <p><a style="color:#020202" href="https://backend-form-mrac.netlify.app/.netlify/functions/downloadCalendar">Adicionar ao calendario!</a></p>
+            <p><strong>Obrigado pela confirmação!</strong><br>Enviámos um email com os detalhes deste grande
+                dia!<br>Confirmem se foi para o SPAM.<br></p>
+            <p><a style="color:#020202"
+                    href="https://backend-form-mrac.netlify.app/.netlify/functions/downloadCalendar">Adicionar ao
+                    calendario!</a></p>
             <p>Mais sobre a nossa Lua-de-Mel em <span id="contador">15</span> segundos!</p>
         </div>
         <p id="responseMessage"></p>
@@ -102,31 +105,31 @@
                 other_guests: document.getElementById("otherGuests").value,
                 comments: document.getElementById("comments").value
             };
-            document.getElementById("confirmationButton").style.display = 'none';
-            document.querySelector("fieldset").disabled = true;
-            document.getElementById("mensagem").style.display = "block";
-            
-            const response = await fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
+            fetch("https://backend-form-mrac.netlify.app/.netlify/functions/submitForm", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify(formData)
             });
-            const result = await response.json();
-           
+            setTimeout(() => {
+                document.getElementById("confirmationButton").style.display = 'none';
+                document.querySelector("fieldset").disabled = true;
+                document.getElementById("mensagem").style.display = "block";
+                document.getElementById("mensagem").scrollIntoView({ behavior: 'smooth' });
+                let segundos = 15;
+                let contadorElemento = document.getElementById("contador");
+                let intervalo = setInterval(function () {
+                    segundos--;
+                    contadorElemento.textContent = segundos;
 
-            let segundos = 15;
-            let contadorElemento = document.getElementById("contador");
-            let intervalo = setInterval(function () {
-                segundos--;
-                contadorElemento.textContent = segundos;
+                    if (segundos <= 0) {
+                        clearInterval(intervalo);
+                        window.location.href = "viagem.html";
+                    }
+                }, 1000);
 
-                if (segundos <= 0) {
-                    clearInterval(intervalo);
-                    window.location.href = "viagem.html";
-                }
-            }, 1000);
+            }, 500);
         });
     </script>
 </body>
