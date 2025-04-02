@@ -263,6 +263,7 @@ i.sidebar-icon {
 .sidebar.open {
     opacity: 1;
     visibility: visible;
+    z-index: 1;
 }
 
 .open-btn {
